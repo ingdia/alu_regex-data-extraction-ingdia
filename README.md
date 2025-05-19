@@ -7,7 +7,7 @@ This project is made using python and regex(Regular Expression) to extract rael 
 I extract and validate the following data types:
 - Email addresses  for example: sample@gmail.com
 - Phone numbers   for example: (123) 456-7890
-- Html tags  for example: <p>
+- Html tags  for example: &lt;p&gt; Welcome &lt;/p&gt;
 - Hashtags  for example: #ThisIsAHashtag
 - Currency amounts  for example: $1,234.56
 ### techonlogy used 
@@ -17,3 +17,6 @@ I extract and validate the following data types:
 ## Features
 - OOP- based architecture using PatternTypes and Extrector classes
 - Regex patterns to match real-world text formats
+
+## here is the Output 
+![Project Output](./sample.png)

@@ -19,22 +19,22 @@ class Extractor:
     """This class extracts data using regular expressions."""
     def __init__(self):
         self.patterns = PatternTypes()
-
+    # function to extract email
     def emails_extractor(self, text):
         return re.findall(self.patterns.email_typ, text)
-
+    # function to extract phone number
     def phone_extractor(self, text):
         return re.findall(self.patterns.phone_typ, text)
-
+    # function to extract  hashtag
     def hashtag_extractor(self, text):
         return re.findall(self.patterns.hashtag_typ, text)
-
+    # function to extract html tags 
     def htmltag_extractor(self, text):
         return re.findall(self.patterns.htmltag_typ, text)
-
+    # function to extract  currency 
     def currency_extractor(self, text):
         return re.findall(self.patterns.currency_typ, text)
-
+    # function to keep them together
     def extract_all(self, text):
         """Extract all data types from the sample text."""
         return {
@@ -45,7 +45,7 @@ class Extractor:
             "Currency Amounts": self.currency_extractor(text)
         }
 
-
+# display function that help to have an user friendly format
 def display_results(results):
     print("Here are the extracted results:")
     for key, values in results.items():
@@ -66,7 +66,7 @@ def main():
     Here's a tag: <h1 class='main'>Welcome to Our website</h1>
     Products being sold at $19.99 or premium packages for $1,234.56
     """
-
+    # instant of a class Extractor
     my_extractor = Extractor()
     results = my_extractor.extract_all(my_sample_text)
     display_results(results)
